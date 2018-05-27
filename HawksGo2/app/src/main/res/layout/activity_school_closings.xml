@@ -15,7 +15,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Go Back"
-        android:background="@color/colorAccent"
+        android:background="@drawable/round_highlight_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,13 +23,17 @@
         android:id="@+id/textView"
         android:layout_width="145dp"
         android:layout_height="125dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/rounded_gray"
         android:fadingEdge="horizontal"
         android:text="The School is Open!"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        />
+
+
 
 </android.support.constraint.ConstraintLayout>

@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         configureCalendarEvents();
         openSchoology();
         getGrades();
+        getLunchMenu();
 
     }
 
@@ -92,6 +93,16 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(i);
                 }
 
+            }
+        });
+    }
+
+    private void getLunchMenu(){
+
+        final Button lunchMenu = findViewById(R.id.menu);
+        lunchMenu.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LunchMenu.class));
             }
         });
     }

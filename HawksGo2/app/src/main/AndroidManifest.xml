@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".schoolClosings" />
-        <activity android:name=".Calendar"></activity>
+        <activity android:name=".Calendar" />
+        <activity android:name=".LunchMenu"></activity>
     </application>
 
 </manifest>

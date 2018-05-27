@@ -31,6 +31,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Go Back"
+        android:background="@drawable/round_highlight_button"
         app:layout_constraintBottom_toTopOf="@+id/cooperCalendar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
