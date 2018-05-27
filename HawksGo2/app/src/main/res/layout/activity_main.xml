@@ -78,7 +78,7 @@
         android:layout_marginBottom="30dp"
         android:layout_marginEnd="15dp"
         android:layout_marginTop="145dp"
-        android:text="Schoology"
+        android:background="@drawable/schoology"
         app:layout_constraintBottom_toTopOf="@+id/lunchAndLearn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/infiniteCampus"
