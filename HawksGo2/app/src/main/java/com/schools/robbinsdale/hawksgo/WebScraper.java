@@ -14,11 +14,9 @@ import java.net.URL;
 class WebScraper {
 
 
-    public String scrapeSite(String url) throws IOException{
+    public Document scrapeSite(String url) throws IOException{
         String title = null;
         Document document = Jsoup.connect(url).get(); //downloads the html from that website
-
-        title = document.title();
 
         /* Some sample code for later reference
         Elements paragraphs = document.getElementsByTag("p");
@@ -26,28 +24,28 @@ class WebScraper {
         for (Element paragraph : paragraphs) {
             System.out.println(paragraph.text());
         }*/
-        return title;
+        return document;
     }
 
 }
 
-class AsyncCaller extends AsyncTask<String, Void, String> {
+class AsyncCaller extends AsyncTask<String, Void, Document> {
 
     @Override
-    protected String doInBackground(String... strings) {
+    protected Document doInBackground(String... strings) {
         WebScraper scraper = new WebScraper();
-        String title;
+        Document page = null;
         try{
-            title = scraper.scrapeSite(strings[0]);
+            page = scraper.scrapeSite(strings[0]);
         }
         catch (IOException e){
-            title = e.getMessage();
+            e.printStackTrace();
         }
-        return title;
+        return page;
     }
 
     @Override
-    protected void onPostExecute(String result){
+    protected void onPostExecute(Document result){
 
         super.onPostExecute(result);
 

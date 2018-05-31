@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         configureClosedSchools();
         configureCalendarEvents();
         openSchoology();
-        getGrades();
+        //getGrades();
         getLunchMenu();
 
     }

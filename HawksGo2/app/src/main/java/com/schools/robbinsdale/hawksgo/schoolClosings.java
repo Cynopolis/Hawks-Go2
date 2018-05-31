@@ -18,14 +18,6 @@ public class schoolClosings extends AppCompatActivity {
         setContentView(R.layout.activity_school_closings);
 
         backButton();
-        TextView open_status = (TextView) this.findViewById(R.id.openStatus);
-        /*try {
-            open_status.setText(new AsyncCaller().execute("https://developer.android.com/reference/android/os/AsyncTask").get());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }*/
     }
 
     private void backButton(){
