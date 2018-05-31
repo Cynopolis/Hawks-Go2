@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public class schoolClosings extends AppCompatActivity {
 
@@ -18,16 +19,13 @@ public class schoolClosings extends AppCompatActivity {
 
         backButton();
         TextView open_status = (TextView) this.findViewById(R.id.openStatus);
-
-       // WebScraper scraper = new WebScraper();
-        String title = "No title found";
         /*try {
-            title = scraper.scrapeSite();
-        }
-        catch (IOException e){
-            title = e.getMessage();
-        }
-        open_status.setText(title);*/
+            open_status.setText(new AsyncCaller().execute("https://developer.android.com/reference/android/os/AsyncTask").get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }*/
     }
 
     private void backButton(){

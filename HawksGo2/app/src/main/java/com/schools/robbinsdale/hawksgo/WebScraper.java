@@ -8,15 +8,11 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.net.URL;
 
 
-class WebScraper extends AsyncTask<String, Void, String> {
+class WebScraper {
 
-    public String current_URL = "https://www.google.com/";
-    public String setURL(String URL){
-        current_URL = URL;
-        return current_URL;
-    }
 
     public String scrapeSite(String url) throws IOException{
         String title = null;
@@ -33,16 +29,16 @@ class WebScraper extends AsyncTask<String, Void, String> {
         return title;
     }
 
+}
 
-    protected void onPostExecute() {
-    }
+class AsyncCaller extends AsyncTask<String, Void, String> {
 
     @Override
     protected String doInBackground(String... strings) {
-        String title = null;
-        String url = current_URL;
+        WebScraper scraper = new WebScraper();
+        String title;
         try{
-            title = scrapeSite(url);
+            title = scraper.scrapeSite(strings[0]);
         }
         catch (IOException e){
             title = e.getMessage();
@@ -50,4 +46,10 @@ class WebScraper extends AsyncTask<String, Void, String> {
         return title;
     }
 
+    @Override
+    protected void onPostExecute(String result){
+
+        super.onPostExecute(result);
+
+    }
 }
